@@ -1,0 +1,31 @@
+<div class="container col-md-8 mt-5">
+   <form action="/lego/edit/{{lego._id}}" method="post" class="card p-3 bg-light text-center">
+      <h2 class="text text-primary">Edit lego</h2>
+      <div class="form-group">
+         <label class="text-success h6">Name</label>
+         <input class="form-control" type="text" name="name" value="{{lego.name}}" required minlength="3"
+            maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Brand</label>
+         <input class="form-control" type="text" name="brand" value="{{lego.brand}}" required minlength="3"
+            maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Image</label><br>
+         <img src="{{lego.image}}" width="100" height="100">
+         <input class="form-control mt-3" type="text" name="image" value="{{lego.image}}" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-success h6">Price</label>
+         <input class="form-control" type="number" name="price" value="{{lego.price}}"  required>
+     </div>
+     <div class="form-group mt-3">
+         <label class="text-success h6">Status</label>
+         <input class="form-control" type="text" name="status" value="{{lego.status}}"  required>
+     </div>
+      <div class="form-group mt-3">
+         <input class="btn btn-primary mt-3" type="submit" value="Edit">
+      </div>
+   </form>
+</div>

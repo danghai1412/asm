@@ -1,0 +1,28 @@
+<div class="container col-md-8 mt-5">
+   <form action="/robot/add" method="post" class="card p-3 bg-secondary text-center">
+      <h2 class="text text-primary">Add new robot</h2>
+      <div class="form-group">
+         <label class="text-info h6">Name</label>
+         <input class="form-control" type="text" name="name" required minlength="3" maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-info h6">Brand</label>
+         <input class="form-control" type="text" name="brand" required minlength="3" maxlength="20">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-info h6">Image</label>
+         <input class="form-control" type="text" name="image" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-info h6">Price</label>
+         <input class="form-control" type="number" name="price" required>
+      </div>
+      <div class="form-group mt-3">
+         <label class="text-info h6">Status</label>
+         <input class="form-control" type="text" name="status" required>
+      </div>
+      <div class="form-group mt-3">
+         <input class="btn btn-primary mt-3" type="submit" value="Add">
+      </div>
+   </form>
+</div>

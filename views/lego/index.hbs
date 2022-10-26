@@ -1,0 +1,50 @@
+<table class="table table-bordered bg-secondary p-4 mt-3 mb-3 text-center">
+   <tr>
+      <th class="text-primary" colspan="5">Lego List</th>
+      <th>
+         <a class="btn btn-primary" href="/lego/add">ADD</a>
+         <a class="btn btn-success" href="/lego/drop"
+            onclick="return confirm('Are you sure to drop all lego ?');">DELETE All</a>
+      </th>
+   </tr>
+   <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Menu</th>
+      
+   </tr>
+   <tr>
+      <th colspan="5">
+         <select class="form-control" onchange="window.location.href=this.value">
+            <option value="">Sort by name</option>
+            <option value="/lego/sort/asc">Ascending</option>
+            <option value="/lego/sort/desc">Descending</option>
+         </select>
+      </th>
+      <th colspan="1">
+         <form action="/lego/search" method="post">
+            <div class="form-group">
+               <input class="form-control" type="search" name="name" placeholder="Search by name">
+            </div>
+         </form>
+      </th>
+   </tr>
+   {{#each lego }}
+   <tr>
+      <td>{{name}}</td>
+      <td>{{brand}}</td>
+      <td>
+            <img src="{{image}}" width="100" height="100">
+      </td>
+      <td>{{price}} </td>
+      <td>{{status}} </td>
+      <td>
+         <a class="btn btn-warning" href="/lego/edit/{{_id}}">EDIT</a>
+         <a class="btn btn-danger" href="/lego/delete/{{_id}}">DELETE</a>
+      </td>
+   </tr>
+   {{/each}}
+</table>

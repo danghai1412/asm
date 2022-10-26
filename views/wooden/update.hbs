@@ -1,28 +1,28 @@
 <div class="container col-md-8 mt-5">
-   <form action="/mohinh/edit/{{mohinh._id}}" method="post" class="card p-3 bg-light text-center">
-      <h2 class="text text-primary">Edit Mo hinh</h2>
+   <form action="/wooden/edit/{{wooden._id}}" method="post" class="card p-3 bg-light text-center">
+      <h2 class="text text-primary">Edit Wooden</h2>
       <div class="form-group">
          <label class="text-success h6">Name</label>
-         <input class="form-control" type="text" name="name" value="{{mohinh.name}}" required minlength="3"
+         <input class="form-control" type="text" name="name" value="{{wooden.name}}" required minlength="3"
             maxlength="20">
       </div>
       <div class="form-group mt-3">
          <label class="text-success h6">Brand</label>
-         <input class="form-control" type="text" name="brand" value="{{mohinh.brand}}" required minlength="3"
+         <input class="form-control" type="text" name="brand" value="{{wooden.brand}}" required minlength="3"
             maxlength="20">
       </div>
       <div class="form-group mt-3">
          <label class="text-success h6">Image</label><br>
-         <img src="{{mohinh.image}}" width="100" height="100">
-         <input class="form-control mt-3" type="text" name="image" value="{{mohinh.image}}" required>
+         <img src="{{wooden.image}}" width="100" height="100">
+         <input class="form-control mt-3" type="text" name="image" value="{{wooden.image}}" required>
       </div>
       <div class="form-group mt-3">
          <label class="text-success h6">Price</label>
-         <input class="form-control" type="number" name="price" value="{{mohinh.price}}"  required>
+         <input class="form-control" type="number" name="price" value="{{wooden.price}}"  required>
      </div>
      <div class="form-group mt-3">
          <label class="text-success h6">Status</label>
-         <input class="form-control" type="text" name="status" value="{{mohinh.status}}"  required>
+         <input class="form-control" type="text" name="status" value="{{wooden.status}}"  required>
      </div>
       <div class="form-group mt-3">
          <input class="btn btn-primary mt-3" type="submit" value="Edit">

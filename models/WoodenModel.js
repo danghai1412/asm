@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-var LegoSchema = new mongoose.Schema({
+var WoodenSchema = new mongoose.Schema({
     brand: String,
     image: String,
     name: String,
@@ -10,5 +10,5 @@ var LegoSchema = new mongoose.Schema({
     versionKey: false //optional (to remove _v: 0 when add new data)
 })
 
-var LegoModel = mongoose.model('Lego', LegoSchema, 'lego')
-module.exports = LegoModel
+var WoodenModel = mongoose.model('wooden', WoodenSchema, 'wooden')
+module.exports = WoodenModel

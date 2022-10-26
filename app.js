@@ -7,11 +7,12 @@ var logger = require('morgan')
 var indexRouter = require('./routes/index')
 var robotRouter = require('./routes/robot')
 var legoRouter = require('./routes/lego')
+var mohinhRouter = require('./routes/mohinh')
 
 
 var mongoose = require('mongoose')
 var url =
-    'mongodb+srv://danghai1412:hai14122002@cluster0.b95irw9.mongodb.net/cloud'
+    'mongodb://localhost:27017/demo'
 
 mongoose.connect(url, { useNewUrlParser: true }, err => {
     if (!err) {
@@ -51,6 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/robot', robotRouter)
 app.use('/lego', legoRouter)
+app.use('/mohinh', mohinhRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
